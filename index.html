@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samvadini - Unified Accessibility Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-universal-access"></i>
+                    <span>Samvadini</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#video">Demo</a>
+                    <a href="#download">Download</a>
+                    <a href="#team">Team</a>
+                </div>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Empowering Accessibility Through Technology</h1>
+                <p>A comprehensive solution developed by VIT Pune AI & DS students to assist people with disabilities through voice, emotion, and sign language technologies.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn">Download Project</a>
+                    <a href="#video" class="btn btn-outline">View Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>Our solution integrates multiple accessibility technologies into a single platform</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Voice Assistant</h3>
+                        <p>Intelligent voice commands for hands-free operation. Ask questions, set reminders, or control your device with natural speech.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Multi-Language Support</h3>
+                        <p>Supports multiple languages including English, Marathi, Hindi, and Kannada for broad accessibility.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Emotion Detection</h3>
+                        <p>Advanced AI analyzes text to detect emotions and adjusts speech output accordingly for more natural interactions.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sign Language Conversion</h3>
+                        <p>Converts text to Indian Sign Language (ISL) videos to assist the hearing impaired community.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>AI-Powered Assistance</h3>
+                        <p>Integrates with Cohere AI for intelligent question answering and task completion.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Real-time Information</h3>
+                        <p>Provides weather updates, time, date, jokes, and Wikipedia information through voice commands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Demonstration</h2>
+                <p>See our accessibility solution in action</p>
+            </div>
+            <div class="video-container">
+                <div class="video-player-container">
+                    <video id="demoVideo" class="video-player" poster="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80">
+                        <source src="IntroSamvadini.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-controls">
+                    <div class="control-group">
+                        <button id="playBtn" title="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="pauseBtn" title="Pause" style="display:none;">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button id="stopBtn" title="Stop">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="muteBtn" title="Mute">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <div class="volume-container">
+                            <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="speedSelect">Speed:</label>
+                        <select id="speedSelect" class="speed-select">
+                            <option value="0.5">0.5x</option>
+                            <option value="0.75">0.75x</option>
+                            <option value="1" selected>1x</option>
+                            <option value="1.25">1.25x</option>
+                            <option value="1.5">1.5x</option>
+                            <option value="2">2x</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="fullscreenBtn" title="Fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="time-display" id="timeDisplay">00:00 / 00:00</div>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>Get the Application</h2>
+                <p>Download the Samvadini and experience the power of accessible technology.</p>
+                <a href="https://drive.google.com/your-drive-link" class="btn" target="_blank">
+                    <i class="fas fa-download"></i> Download EXE File
+                </a>
+                
+                <div class="download-options">
+                    <div class="download-card">
+                        <i class="fab fa-windows"></i>
+                        <h3>Windows</h3>
+                        <p>Download the Windows executable file</p>
+                        <a href="https://drive.google.com/your-drive-link" class="btn" target="_blank">Download</a>
+                    </div>
+                    
+                    <div class="download-card">
+                        <i class="fab fa-github"></i>
+                        <h3>Source Code</h3>
+                        <p>Explore the project on GitHub</p>
+                        <a href="https://github.com/Prasad-Dalvi/Samvadini-ASEP2_2024-25" class="btn btn-outline" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team</h2>
+                <p>First Year AI & DS students at VIT Pune</p>
+                <p>Prasad Dalvi-Code Coordinator Suyash Bhagat-Technical Coordinator</p>
+                <p>Madhav Baviskar-HR Coordinator Aniket Dabhade-Reserach and Document</p>
+            </div>
+            
+            <div class="mentor-section">
+                <h3>Under the Guidance of</h3>
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="girish.kotwal.jpeg" alt="Prof. Girish Kotwal" class="team-photo">
+                    </div>
+                    <div class="team-info">
+                        <h3>Prof. Girish Kotwal</h3>
+                        <p>Faculty Advisor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Samvadini</h3>
+                    <p>An innovative solution developed to empower people with disabilities through cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#video">Demo</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/Prasad-Dalvi/Samvadini-ASEP2_2024-25" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://drive.google.com/your-drive-link" target="_blank">Download EXE</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> VIT Pune, India</li>
+                        <li><i class="fas fa-envelope"></i> contact.samvadini@gmail.com</li>
+                        <li><i class="fas fa-users"></i> AI & DS Batch 2024-25</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Samvadini. All rights reserved. | Developed by First Year 2024-25 AI & DS Students at VIT Pune</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements
+        document.querySelectorAll('.feature-card, .download-card, .team-card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Enhanced video player controls
+        const video = document.getElementById('demoVideo');
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const muteBtn = document.getElementById('muteBtn');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const speedSelect = document.getElementById('speedSelect');
+        const progressBar = document.getElementById('progressBar');
+        const progress = document.getElementById('progress');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        
+        // Play/Pause functionality
+        playBtn.addEventListener('click', () => {
+            video.play();
+            playBtn.style.display = 'none';
+            pauseBtn.style.display = 'block';
+        });
+        
+        pauseBtn.addEventListener('click', () => {
+            video.pause();
+            pauseBtn.style.display = 'none';
+            playBtn.style.display = 'block';
+        });
+        
+        // Stop functionality
+        stopBtn.addEventListener('click', () => {
+            video.pause();
+            video.currentTime = 0;
+            pauseBtn.style.display = 'none';
+            playBtn.style.display = 'block';
+            progress.style.width = '0%';
+        });
+        
+        // Mute/unmute functionality
+        muteBtn.addEventListener('click', () => {
+            video.muted = !video.muted;
+            muteBtn.innerHTML = video.muted ? 
+                '<i class="fas fa-volume-mute"></i>' : 
+                '<i class="fas fa-volume-up"></i>';
+        });
+        
+        // Volume control
+        volumeSlider.addEventListener('input', () => {
+            video.volume = volumeSlider.value;
+            video.muted = (volumeSlider.value == 0);
+            muteBtn.innerHTML = (volumeSlider.value == 0) ? 
+                '<i class="fas fa-volume-mute"></i>' : 
+                '<i class="fas fa-volume-up"></i>';
+        });
+        
+        // Playback speed
+        speedSelect.addEventListener('change', () => {
+            video.playbackRate = speedSelect.value;
+        });
+        
+        // Progress bar
+        video.addEventListener('timeupdate', () => {
+            const percent = (video.currentTime / video.duration) * 100;
+            progress.style.width = `${percent}%`;
+            
+            // Update time display
+            const currentMinutes = Math.floor(video.currentTime / 60);
+            const currentSeconds = Math.floor(video.currentTime % 60);
+            const durationMinutes = Math.floor(video.duration / 60);
+            const durationSeconds = Math.floor(video.duration % 60);
+            
+            timeDisplay.textContent = 
+                `${currentMinutes.toString().padStart(2, '0')}:${currentSeconds.toString().padStart(2, '0')} / 
+                 ${durationMinutes.toString().padStart(2, '0')}:${durationSeconds.toString().padStart(2, '0')}`;
+        });
+        
+        // Click on progress bar to seek
+        progressBar.addEventListener('click', (e) => {
+            const pos = (e.pageX - progressBar.getBoundingClientRect().left) / progressBar.offsetWidth;
+            video.currentTime = pos * video.duration;
+        });
+        
+        // Fullscreen functionality
+        fullscreenBtn.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        });
+        
+        // Initialize video
+        video.addEventListener('loadedmetadata', () => {
+            const durationMinutes = Math.floor(video.duration / 60);
+            const durationSeconds = Math.floor(video.duration % 60);
+            timeDisplay.textContent = 
+                `00:00 / ${durationMinutes.toString().padStart(2, '0')}:${durationSeconds.toString().padStart(2, '0')}`;
+        });
+        
+        // Handle video end
+        video.addEventListener('ended', () => {
+            pauseBtn.style.display = 'none';
+            playBtn.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
